@@ -1,0 +1,26 @@
+{
+  "name": "appPatterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "start": "node app.js",
+    "dev": "nodemon eslint app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.4.0",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.9"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3",
+    "supertest": "^4.0.2"
+  }
+}
