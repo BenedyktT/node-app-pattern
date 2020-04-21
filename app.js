@@ -1,14 +1,13 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
-require("./config/db")();
+require("./config/db").connect();
 const Book = require("./models/Book");
+const bodyParser = require("body-parser");
 
+app.use(bodyParser.json({ extended: true }));
 app.use("/book", require("./src/api/routers/book")(Book));
 app.get("/", (req, res) => {
   res.redirect("/book");
 });
 
-app.listen(PORT, () => {
-  console.log("server running");
-});
+module.exports = app;

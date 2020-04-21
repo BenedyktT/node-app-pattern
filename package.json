@@ -7,7 +7,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watch --runInBand --detectOpenHandles",
     "lint": "eslint .",
     "start": "node app.js",
     "dev": "nodemon eslint app.js"
@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jest": "^25.4.0",
     "mongodb": "^3.5.6",

@@ -4,8 +4,7 @@ module.exports = (Model) => {
     return res.status(200).json(result);
   };
   const post = async (req, res) => {
-    const book = { title: "Something", author: "Something else" };
-    const newBook = new Model(book);
+    const newBook = new Model(req.body);
     await newBook.save();
     return res.json(newBook);
   };
