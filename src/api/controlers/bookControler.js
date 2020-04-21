@@ -1,7 +1,7 @@
 module.exports = (Model) => {
   const get = async (req, res) => {
     const result = await Model.find();
-    return res.json(result);
+    return res.status(200).json(result);
   };
   const post = async (req, res) => {
     const book = { title: "Something", author: "Something else" };
