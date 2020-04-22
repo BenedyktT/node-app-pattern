@@ -9,8 +9,8 @@
   "scripts": {
     "test": "jest --watch --runInBand --detectOpenHandles",
     "lint": "eslint .",
-    "start": "node app.js",
-    "dev": "nodemon eslint app.js"
+    "start": "node index.js",
+    "dev": "nodemon eslint index.js"
   },
   "keywords": [],
   "author": "",
